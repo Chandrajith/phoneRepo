@@ -5,6 +5,7 @@
   - README.md   ~ This current file
   - CodeBook.md ~ Describes the variables, transformation on the data
   - tidydata.csv ~ Generated tidy dataset.
+  - run_analysis.R  ~ The R script for getting and cleaning data.
 
 ### Running the script
 
