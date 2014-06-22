@@ -38,7 +38,7 @@ Note
 - The X_train.txt contains the training data
 - The Y_train.txt contains the corresponding label
 
-### Third,  Uses descriptive activity names to name the activities in the data set
+### Third, uses descriptive activity names to name the activities in the data set
 ```r
 
 activities         <- read.table("activity_labels.txt",colClasses="character")
@@ -46,7 +46,7 @@ testData_label$V1  <- factor(testData_label$V1,levels=activities$V1,labels=activ
 trainData_label$V1 <- factor(trainData_label$V1,levels=activities$V1,labels=activities$V2)
 ```
 
-### Fourth Appropriately labels the data set with descriptive activity names
+### Fourth, appropriately labels the data set with descriptive activity names
 ```r
 
 colnames(testData)         <- features$V2
@@ -57,7 +57,7 @@ colnames(testData_subject) <- c("Subject")
 colnames(trainData_subject)<- c("Subject")
 ```
 
-#### Fifth,  i.e Filter anything other than std or mean
+### Fifth, filter anything other than std or mean
 ```r
 
 testData <- testData[,c(grepl('-(mean|std)[(]', names(testData)))]
@@ -65,7 +65,7 @@ trainData <- trainData[,c(grepl('-(mean|std)[(]', names(trainData)))]
 ```
 
 
-###  Sixth, merge test and training sets into one data set
+### Sixth, merge test and training sets into one data set
   - Uses cbind  twice to combine columns of data and activity
   - [Data], [Activity]  => [Data, Activity]
   - cbind again to make [Data, Label, Activity]
